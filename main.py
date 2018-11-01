@@ -49,10 +49,10 @@ def blog_posts():
 
 @app.route('/single')
 def single():
-
-    
+    blog_id =request.args.get('id')
+    blog = Blog.query.get(blog_id)
     blogs = Blog.query.filter_by().all()
-    return render_template('single.html', blogs=blogs)
+    return render_template('single.html', blogs=blogs, blog=blog)
 
 if __name__ == '__main__':
     app.run()
