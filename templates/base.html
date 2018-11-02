@@ -13,11 +13,16 @@
     </style>
 </head>
 <body>
-    <nav>
-        <a href="/blog">Main Blog Page</a>
-        <a href="/newpost">Add a Blog Entry</a>
-    </nav>
-
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/blog">Main Blog Page</a></li>    
+                <li><a href="/newpost"> Add a Blog Entry</a></li>
+                <li><a href="/logout">Log Out</a></li>
+                <li><a href="/login">Login</a></li>
+            </ul>
+        </nav>
+    </header>    
     {% block content %}
     {% endblock %}
 </body>
